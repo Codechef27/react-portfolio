@@ -2,13 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:'Poiret One',cursive 'Lucida Sans Regular', Verdana, sans-serif;
+  font-family: 'Bradley Hand', Verdana, Geneva, Tahoma, sans-serif;
   
 }
 :root {
   --primary-color: #ffffff;
   --secondary-color: #272424;
-  --terttiary-color: #10d4a3f1;
+  --terttiary-color: rgb(231, 231, 75);
 }
 
 html,
@@ -25,61 +25,22 @@ header {
   top: 0;
   z-index: 9999;
   background-color: var(--secondary-color);
-  border-bottom: var(--terttiary-color) 2px solid;
-  
- 
+  opacity: 90%;
+  /* border-bottom: var(--terttiary-color) 2px solid; */ 
 }
 
-/* header ul {
-  list-style: none;
-  margin: 10px 0; 
-  padding: 10px 0;
-  background-color: var(--secondary-color);
-} */
-
-header  li  {
-  color: var(--primary-color);
-  text-decoration: none;
-  padding: 15px 15px;
-  font-size: 18px;
-  cursor: pointer;
-  
-}
-
-header li a:hover {
-  font-weight: bolder;
+header a:hover {
+  font-weight: bold;
   color:var(--terttiary-color);
 
 } 
-
-.git {
-  height: 40px;
-  margin: 20px;
-  background-color: var(--primary-color);
-  border-radius: 50px;
-  border: 1px solid var(--primary-color) ;   
+header a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 15px 15px;
+  font-size: 18px;
+  cursor: pointer; 
 }
-
-.git:hover {
-  background-color: var(--terttiary-color);
-  border-radius: 50px;
-  border: 1px solid var(--terttiary-color) ; 
-}
-
-.linkedin {
-  height: 40px;
-  margin: 20px;
-  background-color:var(--primary-color);
-  border-radius: 50px;
-  border: 1px solid var(--primary-color) ;
-}
-
-.linkedin:hover {
-  background-color: var(--terttiary-color);
-  border-radius: 50px;
-  border: 1px solid var(--terttiary-color) ; 
-}    
-
 
 .navbar-toggler {
   width: 20px;
@@ -173,43 +134,63 @@ header li a:hover {
   background-image: url(../src/assets/images/portfolio-background.jpg);
   background-size:cover;
   height: 600px;
-  border: var(--terttiary-color) solid 2px;
+  border-top: var(--terttiary-color) solid 2px;
+  border-bottom: var(--terttiary-color) solid 2px;
   align-items: center;
   justify-content: center;
   display: flex;
   text-align: center;
   
 }
+/* .oct {
+  background: red;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+} */
+.oct {
+  /* position: relative; */
+  background: var(--secondary-color);
+  width: max-content;
+  height: 420px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 92%;
+  overflow: hidden;
+}
 
 .hero p {
-  /* text-align: center; */
+
   color: var(--primary-color);
-  font-size: 32px;
-  margin: 0 24px; 
+  font-size: 28px;
+  margin: 10px 10px; 
+  opacity: none;
 }
+
 
 .hero span {
-  color: var(--terttiary-color);
+  color: rgb(231, 231, 75);
 }
-
-.view-my-work {
-  align-items: center;
-  padding: 28px;
-  flex: content;
-}                 
 
 .btn-1 {
   border: 2px solid var(--terttiary-color);
-  font-size: 22px;
+  font-size: 18px;
   background-color: var(--secondary-color);
-  padding: 8px 8px;
+  padding: 8px;
   color: var(--primary-color);
   cursor: pointer;
+  margin: 10px;
 }
 
 .btn-1:hover {
-  font-weight: bolder;
   color: var(--terttiary-color);
+  font-weight: bold;
+  transition: ease-in-out;
 }
 /*--------------------------------------------------------------------*/
 
@@ -396,19 +377,39 @@ input::placeholder {
 /*------------------------------------------------------------------------------------*/
 footer { 
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  height: 100px;
-  background-color: var(--terttiary-color);
-  margin-top: 10px;
+  background-color: var(--secondary-color);
+  height: auto;
+  
 }
 
-footer h4 {
-  font-size: 22px;
-  color: var(--secondary-color);
-  margin: 0 18px 0;
+.git {
+  height: 50px;
+  margin: 20px;
+  border-radius: 50px;
+    
 }
+
+.git:hover {
+  background-color: var(--terttiary-color);
+  border-radius: 50px;
+  border: 1px solid var(--terttiary-color) ; 
+}
+
+.linkedin {
+  height: 50px;
+  margin: 20px;
+  border-radius: 50px;
+  
+}
+
+.linkedin:hover {
+  background-color: var(--terttiary-color);
+  border-radius: 50px;
+  border: 1px solid var(--terttiary-color) ; 
+}  
+
 /*------------------------------------------------------------------------------------*/
 /*media query for smaller desktop screen and smaller*/
 @media screen and (max-width: 980px) {

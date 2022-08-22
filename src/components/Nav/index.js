@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
-import githubIcon from "../../assets/images/github.svg";
-import linkedinIcon from "../../assets/images/linkedin-icon.svg";
+
 
 const Nav = (props) => {
 
@@ -17,21 +16,6 @@ const Nav = (props) => {
     return (
     <header className="container-fluid">
             <section className="d-flex flex-row ">
-                <div>
-                    <a href="https://github.com/Codechef27">
-                        <img className="git"
-                         src={ githubIcon }
-                         alt="github icon" />
-                       
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/bradley-kennett-76a164158/">
-                        <img className="linkedin" 
-                        src={ linkedinIcon }
-                        alt="linkedin icon"/>
-                    </a>
-                </div> 
                 <div className="d-flex ms-auto">
                         <nav className="navbar navbar-expand-lg">
                             <button className="navbar-toggler collapsed d-flex d-lg-none d-flex flex-column 
@@ -50,13 +34,13 @@ const Nav = (props) => {
                                             }`}
                                             key={navLink.name}                                           
                                             >
-                                               <span
+                                              <a href={ '#' + (navLink.name)}> <span
                                             onClick = { () => {
                                                 setCurrentNavLink(navLink)
                                             }}
                                             >
                                             {navLink.name}
-                                            </span>
+                                            </span></a>
                                         </li>
                                     ))}
                                     

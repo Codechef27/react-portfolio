@@ -1,41 +1,57 @@
 import React, { useState } from 'react';
 import './App.css';
-import About from './components/About';
+import Hero from './components/Hero';
 import Nav from './components/Nav';
+import AboutMe from './components/About-me';
+import SocialLinks from './components/Footer';
 
 function App() {
   const [navLinks] = useState([
     {
-      name: "Home"
+      name: 'Home'
+
     },
     {
-      name: "About me"
+      name: 'About me',
     },
     {
-      name: "Portfolio"
+      name: 'Portfolio'
     },
     {
-      name: "Resume"
+      name: 'Resume'
     },
     {
-      name: "Contact"
+      name: 'Contact'
     }
 
   ]);
 
-  const [currentNavLink, setCurrentNavLink] = useState(navLinks[0])
+  const [currentNavLink, setCurrentNavLink] = useState(navLinks[0]);
+  const renderLink = navLinks.filter((link) => link.name === link);
+
   return (
-   <div>
-    <Nav
-    navLinks={navLinks}
-    setCurrentNavLink={setCurrentNavLink}
-    currentNavLink={currentNavLink}
-    ></Nav>
-    <main>
-    <About></About>
-    </main>
-   
-  </div>
+    <div>
+      <Nav
+        navLinks={navLinks}
+        setCurrentNavLink={setCurrentNavLink}
+        currentNavLink={currentNavLink}
+        renderLink={renderLink}
+      ></Nav>
+      <main key={renderLink.name}>
+        <span
+          onClick={() => {
+            setCurrentNavLink(renderLink);
+          }}
+        >
+          {renderLink.name}
+        </span>
+        <Hero></Hero>
+        <AboutMe></AboutMe>
+      </main>
+      <footer>
+        <SocialLinks></SocialLinks>
+      </footer>
+    </div>
   );
 }
 
