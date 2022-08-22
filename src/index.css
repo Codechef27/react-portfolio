@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:'Poiret One',cursive 'Lucida Sans Regular', Verdana, sans-serif;
   
 }
 :root {
@@ -10,14 +11,15 @@
   --terttiary-color: #10d4a3f1;
 }
 
+html,
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+  min-height: 100%;
 }
+
 /*-----------------------------------------------------------------------------------*/
 
 
 header {
-  /* height: 100px; */
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -28,22 +30,23 @@ header {
  
 }
 
-header ul {
+/* header ul {
   list-style: none;
   margin: 10px 0; 
   padding: 10px 0;
   background-color: var(--secondary-color);
-}
+} */
 
-header ul li a {
+header  li  {
   color: var(--primary-color);
   text-decoration: none;
   padding: 15px 15px;
   font-size: 18px;
+  cursor: pointer;
   
 }
 
-header ul li a:hover {
+header li a:hover {
   font-weight: bolder;
   color:var(--terttiary-color);
 
@@ -160,11 +163,9 @@ header ul li a:hover {
   transform: rotate(-135deg);
 }
 
-/* Color of 3 lines */
-
-
-
-
+.navActive {
+  color: var(--terttiary-color);
+}
 
 /*------------------------------------------------------------------------*/
 
@@ -187,6 +188,10 @@ header ul li a:hover {
   margin: 0 24px; 
 }
 
+.hero span {
+  color: var(--terttiary-color);
+}
+
 .view-my-work {
   align-items: center;
   padding: 28px;
@@ -207,22 +212,6 @@ header ul li a:hover {
   color: var(--terttiary-color);
 }
 /*--------------------------------------------------------------------*/
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 90px 72px;  
-}
-
-.main-title {
-  text-align: center;
-  font-size: 31px;
-  width: 344px;
-  padding: 60px 0 8px;
-  color: var(--secondary-color);
-  border-bottom: 3px solid var(--secondary-color);
-}
 
 .fact {
   display: flex;
