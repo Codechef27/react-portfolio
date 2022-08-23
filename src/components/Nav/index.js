@@ -34,7 +34,7 @@ const Nav = (props) => {
                                             }`}
                                             key={navLink.name}                                           
                                             >
-                                              <a href={ '#' + (navLink.name)}> <span
+                                              <a href={ '#' + (navLink.name)} > <span
                                             onClick = { () => {
                                                 setCurrentNavLink(navLink)
                                             }}

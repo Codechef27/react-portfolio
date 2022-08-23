@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Bradley Hand', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Comic Sans MS' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, ;
   
 }
 :root {
@@ -14,6 +14,7 @@
 html,
 body {
   min-height: 100%;
+  font-family: 'Comic Sans MS' ;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -142,16 +143,8 @@ header a {
   text-align: center;
   
 }
+
 /* .oct {
-  background: red;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-} */
-.oct {
-  /* position: relative; */
   background: var(--secondary-color);
   width: max-content;
   height: 420px;
@@ -162,14 +155,12 @@ header a {
   align-items: center;
   opacity: 92%;
   overflow: hidden;
-}
+} */
 
 .hero p {
-
   color: var(--primary-color);
-  font-size: 28px;
-  margin: 10px 10px; 
-  opacity: none;
+  font-size: 38px;
+  margin: 10px; 
 }
 
 
@@ -185,6 +176,8 @@ header a {
   color: var(--primary-color);
   cursor: pointer;
   margin: 10px;
+  border-radius: 10px;
+
 }
 
 .btn-1:hover {
@@ -194,41 +187,80 @@ header a {
 }
 /*--------------------------------------------------------------------*/
 
-.fact {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  padding: 40px 92px 0; 
+.about-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  padding: 36px 0 0;
+  color: var(--secondary-color);
 }
 
-.fact-info {
-  flex: 1 49%;
-  padding: 12px 0;
+.bio {
+  text-align: center;
 }
 
+.bio-title-border {
+  border: 2px solid var(--secondary-color);
+  width: 80px;
+}
+
+.profile-pic {
+  height: 240px;
+  width: 240px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); 
+  
+}
+
+.fact-title-border {
+  border: 2px solid var(--secondary-color);
+  width: 140px;
+}
+
+
+.facts {
+  padding: 28px; 
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 18px;
+}
 
 .fact-img {
   margin: auto;
   height: 88px;
   width: 88px;
-  border: 4px solid var(--secondary-color);
-  border-radius: 50%;
+  padding: 12px;
+  border: 4px solid var(--terttiary-color);
   background-color: var(--terttiary-color);
-  padding: 18px 18px;       
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);       
+}
+
+.fact-img:hover {
+  overflow: hidden;
+  transition-duration: 1.0s;
+  transition-property: transform;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg); 
 }
 
 .fact-text h3 {
-  width: auto;
-  font-size: 32px;
-  color: var(--secondary-color);
-  text-align: center; 
-  margin: 18px 0 0;
+  text-align: center;
+  font-size: 28;
+  color: var(--primary-color);
+  margin: 18px;
+  
+}
+
+.fact-text-border {
+  border: 2px solid var(--primary-color);
+  width: 90px;
 }
 
 .fact-text p {
   text-align: center;
   font-size: 18px;
-  color: var(--secondary-color); 
+  color: var(--primary-color); 
   padding: 12px 0;
 
 }   
@@ -308,21 +340,6 @@ article button:hover {
   
 }
 
-.section-image h3{
-  font-size: 34px;
-  border-bottom: 3px solid var(--secondary-color);
-  padding: 17px 0px;
-  margin: 10px 65px;
- 
-}
-.profile-pic {
-  height: 200px;
-  width: 200px;
-  border: 2px solid var(--terttiary-color);
-  border-radius: 50%;
-  margin: 24px;
-  
-}
 
 form {
   padding: 26px 20px;
@@ -385,30 +402,36 @@ footer {
 }
 
 .git {
-  height: 50px;
-  margin: 20px;
-  border-radius: 50px;
+  height: 40px;
+  margin: 18px;
+  background: var(--primary-color);
+  width: 54px;
+  height: 54px;
+  padding: 4px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     
 }
 
 .git:hover {
-  background-color: var(--terttiary-color);
-  border-radius: 50px;
-  border: 1px solid var(--terttiary-color) ; 
+  background-color: var(--secondary-color);
 }
 
 .linkedin {
-  height: 50px;
-  margin: 20px;
-  border-radius: 50px;
+  height: 40px;
+  margin: 18px;
+  background: var(--primary-color);
+  width: 54px;
+  height: 54px;
+  padding: 8px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   
 }
 
 .linkedin:hover {
-  background-color: var(--terttiary-color);
-  border-radius: 50px;
-  border: 1px solid var(--terttiary-color) ; 
-}  
+  background-color: var(--secondary-color); 
+}    
 
 /*------------------------------------------------------------------------------------*/
 /*media query for smaller desktop screen and smaller*/
