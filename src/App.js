@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Nav from './components/Nav';
 import AboutMe from './components/About-me';
 import SocialLinks from './components/Footer';
+import Portfolio from './components/Portfolio'
 
 function App() {
   const [navLinks] = useState([
@@ -47,6 +48,7 @@ function App() {
         </span>
         <Hero></Hero>
         <AboutMe></AboutMe>
+        <Portfolio></Portfolio>
       </main>
       <footer>
         <SocialLinks></SocialLinks>

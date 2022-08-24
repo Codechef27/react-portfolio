@@ -195,8 +195,8 @@ header a {
   color: var(--secondary-color);
 }
 
-.bio {
-  text-align: center;
+.bio { 
+  text-align: center; 
 }
 
 .bio-title-border {
@@ -267,11 +267,64 @@ header a {
 /*-----------------------------------------------------------------*/
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   background-color: var(--secondary-color);
- 
+  width: 600px;
+}
+
+.carousel {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 50% ;
+  border-radius: 10px;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 32px;
+  color: var(--secondary-color);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 32px;
+  color: var(--secondary-color);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.modalBackdrop {
+	background: rgba(0, 0, 0, .65);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.modalContainer {
+	background: var(--darker);
+	border-radius: 5px;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	width: 960px;
 }
 
 .section-title {
@@ -283,32 +336,6 @@ header a {
   margin-top: 40px;
   
 }
-
-article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-top: 27px;
-  width: 85%;
-}
-
-
-article div {
-  display: grid;
-  margin: 20px;
-}
-.iframe {
-  width: 300px;
-  height: 300px;
-  border: 3px solid silver;
-  padding: 8px;
-}
-iframe {
-  padding: 8px;
-  border: 3px solid silver;
-}
-
 
 article button {
   font-size: 16px;
@@ -394,11 +421,15 @@ input::placeholder {
 /*------------------------------------------------------------------------------------*/
 footer { 
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   background-color: var(--secondary-color);
-  height: auto;
-  
+ 
+}
+
+.copy {
+  color: var(--primary-color);
+  font-family: Brush Script MT;
+  font-size: 22px;
 }
 
 .git {
@@ -417,7 +448,12 @@ footer {
   background-color: var(--secondary-color);
 }
 
+.gitCont {
+  justify-content: flex-end;
+}
+
 .linkedin {
+  justify-content: flex-end;
   height: 40px;
   margin: 18px;
   background: var(--primary-color);
@@ -427,6 +463,10 @@ footer {
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   
+}
+
+.linkedCont {
+  justify-content: flex-end;
 }
 
 .linkedin:hover {
