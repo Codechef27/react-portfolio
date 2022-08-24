@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-
+import React, {useEffect, useState} from "react";
+import Carousel from "../Carousel.js";
 
 const Nav = (props) => {
 
@@ -13,7 +13,19 @@ const Nav = (props) => {
         document.title = (currentNavLink.name);
     }, [ currentNavLink ]); 
 
+    
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const toggleModal = () => {
+    setIsModalOpen(prev => !prev);
+  }
+  
+  if(currentNavLink.name == 'Portfolio') {
+     onclick = (toggleModal())     
+  }
+
     return (
+        <>
     <header className="container-fluid">
             <section className="d-flex flex-row ">
                 <div className="d-flex ms-auto">
@@ -29,20 +41,37 @@ const Nav = (props) => {
                             <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
                                 <ul className="navbar-nav">
                                     {navLinks.map((navLink) => (
-                                        <li className={`nav-item ${
+                                        <li> 
+                                            <span                                         
+                                            >
+                                                <a className={`nav-item ${
                                             currentNavLink.name === navLink.name && 'navActive'
                                             }`}
-                                            key={navLink.name}                                           
-                                            >
-                                              <a href={ '#' + (navLink.name)} > <span
-                                            onClick = { () => {
+                                            key={navLink.name}                                          
+                                            
+                                               href={ '#' + (navLink.name)} 
+                                               onClick =  {  () => {
                                                 setCurrentNavLink(navLink)
-                                            }}
+                                             }}
                                             >
                                             {navLink.name}
-                                            </span></a>
+                                            
+                                            </a></span>
                                         </li>
                                     ))}
+                                         
+                                        <li>
+                                        
+                                        <a className={`nav-item 'navActive'}`}
+                                            key={''}
+                                            href="#portfolio"  
+                                            onClick = { () => {
+                                            toggleModal() 
+                                        }}
+                                          >Portfolio</a> 
+                                         </li>
+                                      
+                                   
                                     
                                 </ul>
                             </div>
@@ -51,9 +80,14 @@ const Nav = (props) => {
             </section>
         
         </header>
+        <div>
+        <Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        </div>
+        </>
     )
 
 
 }
+
 
 export default Nav;

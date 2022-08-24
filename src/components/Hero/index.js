@@ -10,7 +10,7 @@ const About = () => {
               Hello, I'm <span> Bradley Kennett.</span>
             </p>
             <p>Full-stack web developer.</p>
-            <a href="#portfolio">
+            <a href="#Portfolio">
               <button className="btn-1"> View My Work </button>
             </a>
             </span>

@@ -30,11 +30,7 @@ header {
   /* border-bottom: var(--terttiary-color) 2px solid; */ 
 }
 
-header a:hover {
-  font-weight: bold;
-  color:var(--terttiary-color);
 
-} 
 header a {
   text-decoration: none;
   color: var(--primary-color);
@@ -125,8 +121,18 @@ header a {
   transform: rotate(-135deg);
 }
 
-.navActive {
+.nav-item {
+  color: var(--primary-color);
+}
+.nav-item:hover {
   color: var(--terttiary-color);
+}
+.navActive {
+  color:var(--terttiary-color);
+} 
+.imageTitle {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*------------------------------------------------------------------------*/
@@ -266,19 +272,6 @@ header a {
 }   
 /*-----------------------------------------------------------------*/
 
-.portfolio {
-  background-color: var(--secondary-color);
-  width: 600px;
-}
-
-.carousel {
-  position: relative;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .image {
   width: 50% ;
   border-radius: 10px;
@@ -289,7 +282,7 @@ header a {
   top: 50%;
   right: 32px;
   font-size: 32px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -300,7 +293,7 @@ header a {
   top: 50%;
   left: 32px;
   font-size: 32px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -308,23 +301,25 @@ header a {
 }
 
 .modalBackdrop {
-	background: rgba(0, 0, 0, .65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	background: rgba(0, 0, 0, .75);
 	bottom: 0;
-	left: 0;
-	overflow: auto;
+	overflow: none;
 	position: fixed;
-	right: 0;
 	top: 0;
 	z-index: 1;
 }
 
 .modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
+	background: var(--secondary-color);
+	border-radius: 10px;
+	/* max-width: 90%; */
 	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
+	/* padding: 15px; */
+	width: 500px;
+  height: 500px;
 }
 
 .section-title {
