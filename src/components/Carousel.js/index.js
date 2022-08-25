@@ -5,7 +5,7 @@ import theFrontYard from "../../assets/images/carousel/homepage-light.png";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 // import screenshot from '../../assets/images/carousel/Screenshot (19).png'
 
-const Carousel = ({ isModalOpen, setIsModalOpen } ) => {
+const Carousel = ({isModalOpen} ) => {
     const [recentWork] = useState ([
 
         {
@@ -25,7 +25,6 @@ const Carousel = ({ isModalOpen, setIsModalOpen } ) => {
         //     alt: 'screenshot '
         // }
     ])
-    const {title, link } = recentWork.length;
     const [currentImage, setCurrentImage] = useState(0)
     const length = recentWork.length;
 
@@ -40,32 +39,35 @@ const Carousel = ({ isModalOpen, setIsModalOpen } ) => {
     if(!Array.isArray(recentWork) || recentWork.length <= 0) {
         return null;
     } 
+
         return (
             <>
             {isModalOpen ? (
-                <div className="container modalBackdrop">
+                <div className='slider mx-auto' >
                 <FaArrowAltCircleLeft className="leftArrow" onClick={prevImage} />
                 <FaArrowAltCircleRight className="rightArrow" onClick={nextImage} />
-                {recentWork.map((image, index) => {
-                  return ( 
+                {recentWork.map((photo, index) => {
+                  return (
                     <div
-                      className={index === currentImage ? "slide active" : "slide"}
+                      className={
+                        index === currentImage
+                          ? "slide-active mx-auto"
+                          : "slide"
+                      }
                       key={index}
-                    > 
+                    >
                       {index === currentImage && (
-                        <img 
-                          className="modalContainer"
-                          src={image.image}
-                          alt={image.alt} 
+                        <img
+                          className="sliderImage mx-auto"
+                          src={photo.image}
+                          alt={photo.alt}
                         />
-                      )} 
-                      <div>
-                            <h3 className="imageTitle">{title}</h3>
-                        </div> 
-                        <div>
-                            <a href={link}><button> Visit </button></a>
+                      )}
+                      {/* <h3 
+                       className="imageTitle"
+                       > </h3>
 
-                        </div>    
+                           <button href={photo.link}> Visit </button> */}
                     </div>
                   );
                 })}

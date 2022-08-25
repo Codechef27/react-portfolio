@@ -17,8 +17,6 @@ const AboutMe = () => {
           <div className="col-lg-7 d-flex align-items-center bio ">
             <div>
               <div>
-                {/* <h3>Contact</h3>
-                <div className="bio-title-border mx-auto"></div> */}
                 <address className="mt-3">
                   <h5>Have a question or want to contact me ? </h5>
                   <a href="mailto:bradleyjkennett@gmail.com">

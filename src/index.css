@@ -272,17 +272,12 @@ header a {
 }   
 /*-----------------------------------------------------------------*/
 
-.image {
-  width: 50% ;
-  border-radius: 10px;
-}
-
 .rightArrow {
   position: absolute;
   top: 50%;
   right: 32px;
   font-size: 32px;
-  color: var(--primary-color);
+  color: black;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -293,44 +288,39 @@ header a {
   top: 50%;
   left: 32px;
   font-size: 32px;
-  color: var(--primary-color);
+  color: black;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 
 }
 
-.modalBackdrop {
+.slider {
+  height: 80vh;
+  background: rgba(0,0,0,0.8);
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-	background: rgba(0, 0, 0, .75);
-	bottom: 0;
-	overflow: none;
-	position: fixed;
-	top: 0;
-	z-index: 1;
 }
 
-.modalContainer {
-	background: var(--secondary-color);
-	border-radius: 10px;
-	/* max-width: 90%; */
-	margin: 50px auto;
-	/* padding: 15px; */
-	width: 500px;
-  height: 500px;
+.sliderImage {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
-  padding: 80px 59px 27px;
-  margin-top: 40px;
-  
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
 }
+
+.slide-active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  display: flex;
+}
+
 
 article button {
   font-size: 16px;

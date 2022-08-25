@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 
 const About = () => {
     return (
@@ -10,9 +11,8 @@ const About = () => {
               Hello, I'm <span> Bradley Kennett.</span>
             </p>
             <p>Full-stack web developer.</p>
-            <a href="#Portfolio">
-              <button className="btn-1"> View My Work </button>
-            </a>
+      
+              <button className="btn-1" onClick = 'Portfolio'> View My Work </button>
             </span>
           </div>
         </div>

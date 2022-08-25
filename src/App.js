@@ -11,7 +11,6 @@ function App() {
   const [navLinks] = useState([
     {
       name: 'Home'
-
     },
     {
       name: 'Portfolio'
