@@ -1,6 +1,7 @@
 
 import React from 'react';
 
+
 const About = () => {
 
   return (
@@ -15,7 +16,6 @@ const About = () => {
 
             <a href="#Portfolio">
               <button
-                onClick={''}
                 className="btn-1"
               >
                 View My Work

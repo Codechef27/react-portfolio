@@ -22,8 +22,8 @@ const Nav = (props) => {
     }
 
     return (
-      <>
-        <header className="container-fluid">
+      
+        <header className="container-fluid" >
           <section className="d-flex flex-row ">
             <div className="d-flex ms-auto">
               <nav className="navbar navbar-expand-lg">
@@ -73,13 +73,9 @@ const Nav = (props) => {
               </nav>
             </div>
           </section>
+          {<Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} onOpen={toggleModal}/>}
         </header>
-        <section>
-        <div>
-          <Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-        </div>
-        </section>
-      </>
+
     );
 }
 

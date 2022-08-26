@@ -24,9 +24,8 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 9999;
   background-color: var(--secondary-color);
-  opacity: 90%;
+  z-index: 1;
   /* border-bottom: var(--terttiary-color) 2px solid; */ 
 }
 
@@ -262,7 +261,7 @@ header a {
 .rightArrow {
   position: absolute;
   top: 50%;
-  right: 32px;
+  right: 17vw;
   font-size: 32px;
   color: rgb(161, 161, 4);
   z-index: 10;
@@ -273,7 +272,7 @@ header a {
 .leftArrow {
   position: absolute;
   top: 50%;
-  left: 32px;
+  left: 17vw;
   font-size: 32px;
   color: rgb(161, 161, 4);
   z-index: 10;
@@ -284,23 +283,32 @@ header a {
 
 
 .slider {
+  position: absolute;
   height: 80vh;
-  background: rgba(0,0,0,0.8);
-  position: relative;
+  width: 100%;
   display: flex;
-  align-items: center;
   border-top: 2px solid var(--terttiary-color);
+  
 }
 
 .card {
   width: 46%;
-  border-radius: 10px;
   text-align: center;
+  border-radius: 15px;
+ 
+
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .card-body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .card-border {
@@ -325,18 +333,12 @@ header a {
   transition: ease-in-out;
 }
 
-.card-btn:active {
-  box-shadow: 10px ease;
-  
-}
-
 .slide {
-  opacity: 0;
-  transition-delay: 1.5s;
+  transition-delay: .5s;
 }
 
 .slide-active {
-  transition-duration: 1s;
+  transition-duration: 2s;
   transform: scale(1.08);
   margin: auto;
 

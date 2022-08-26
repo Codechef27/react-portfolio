@@ -1,6 +1,5 @@
 
 import React, {useState} from "react";
-import {useSpring, animated } from 'react-spring'
 import gameReviews from "../../assets/images/carousel/game-reviews.png";
 import theFrontYard from "../../assets/images/carousel/the-fron-yard.png";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
@@ -33,7 +32,7 @@ const Carousel = ({ isModalOpen, setIsModalOpen }) => {
     },
     {
       image: photoPort,
-      title: "Photagrapher Portfolio",
+      title: "Photographer Portfolio",
       link: "https://codechef27.github.io/photo-port/",
       alt: " photography portfolio ",
     },
@@ -50,16 +49,6 @@ const Carousel = ({ isModalOpen, setIsModalOpen }) => {
       alt: " budget tracker ",
     },
   ]);
-
-
-  const animation = useSpring({
-    config: {
-      duration: 250,
-    },
-    opacity: isModalOpen ? 1 : 0,
-    tranform: isModalOpen ? "translateY(0%)" : "translateY(-100%)",
-  });
-
 
   const [currentImage, setCurrentImage] = useState(0);
   const length = recentWork.length;
@@ -79,13 +68,14 @@ const Carousel = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <>
       {isModalOpen ? (
-        <div className="slider">
+        <div className="slider mx-auto">
           <FaArrowAltCircleLeft className="leftArrow" onClick={prevImage} />
           <FaArrowAltCircleRight className="rightArrow" onClick={nextImage} />
           {recentWork.map((photo, index) => {
             return (
-              <animated.div style={animation}>
+              
                 <div
+                
                   className={
                     index === currentImage ? "card slide-active" : "slide"
                   }
@@ -110,10 +100,11 @@ const Carousel = ({ isModalOpen, setIsModalOpen }) => {
                         aria-label="Close modal"
                         onClick={() => setIsModalOpen((prev) => !prev)}
                       />
-                    </div>
+                    
+                    </div>  
                   )}
                 </div>
-              </animated.div>
+            
             );
           })}
         </div>

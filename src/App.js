@@ -5,7 +5,6 @@ import Nav from './components/Nav';
 import AboutMe from './components/About-me';
 import SocialLinks from './components/Footer';
 
-
 function App() {
   const [navLinks] = useState([
     {
@@ -28,15 +27,17 @@ function App() {
 
   const [currentNavLink, setCurrentNavLink] = useState(navLinks[0]);
   const renderLink = navLinks.filter((link) => link.name === link);
-  
+
+
   return (
-    <div id='Portfolio'>
+    <div>
+      
       <Nav
         navLinks={navLinks}
         setCurrentNavLink={setCurrentNavLink}
         currentNavLink={currentNavLink}
-        renderLink={renderLink}
-      ></Nav>
+        renderLink={renderLink} 
+      ></Nav> 
       <main key={renderLink.name}>
         <span
           onClick={() => {
@@ -52,7 +53,7 @@ function App() {
         <SocialLinks></SocialLinks>
       </footer>
     </div>
-  );
+  ); 
 }
 
 export default App;
