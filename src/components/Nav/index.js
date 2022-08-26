@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Carousel from "../Carousel.js";
 
+
 const Nav = (props) => {
 
     const {
@@ -13,12 +14,12 @@ const Nav = (props) => {
         document.title = (currentNavLink.name);
     }, [ currentNavLink ]); 
 
-    
-  const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const toggleModal = () => {
-    setIsModalOpen(prev => !prev);
-  }
+    const toggleModal = () => {
+        setIsModalOpen(prev => !prev);
+        
+    }
 
     return (
       <>
@@ -52,12 +53,12 @@ const Nav = (props) => {
                             className={`nav-item ${
                               currentNavLink.name === navLink.name &&
                               "navActive"
-                            }`}
+                            }`} 
                             href={"#" + navLink.name}
                             
                             onClick={() => {
                               (navLink.name === 'Portfolio' && toggleModal())
-                              setCurrentNavLink(navLink)
+                              setCurrentNavLink(navLink) 
                             }}
                         
                           >
@@ -73,13 +74,13 @@ const Nav = (props) => {
             </div>
           </section>
         </header>
+        <section>
         <div>
           <Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         </div>
+        </section>
       </>
     );
-
-
 }
 
 

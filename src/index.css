@@ -150,19 +150,6 @@ header a {
   
 }
 
-/* .oct {
-  background: var(--secondary-color);
-  width: max-content;
-  height: 420px;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 92%;
-  overflow: hidden;
-} */
-
 .hero p {
   color: var(--primary-color);
   font-size: 38px;
@@ -277,7 +264,7 @@ header a {
   top: 50%;
   right: 32px;
   font-size: 32px;
-  color: black;
+  color: rgb(161, 161, 4);
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -288,12 +275,13 @@ header a {
   top: 50%;
   left: 32px;
   font-size: 32px;
-  color: black;
+  color: rgb(161, 161, 4);
   z-index: 10;
   cursor: pointer;
   user-select: none;
 
 }
+
 
 .slider {
   height: 80vh;
@@ -301,40 +289,73 @@ header a {
   position: relative;
   display: flex;
   align-items: center;
+  border-top: 2px solid var(--terttiary-color);
 }
 
-.sliderImage {
-  width: 50%;
-  height: 50%;
+.card {
+  width: 46%;
   border-radius: 10px;
+  text-align: center;
+}
+
+.card-body {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.card-border {
+  border-bottom: 3px solid var(--primary-color);
+  width: 8rem;  
+}
+
+.card-btn {
+  border: 1px solid var(--terttiary-color);
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  padding: 6px;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-btn:hover {
+  color: var(--terttiary-color);
+  font-weight: bold;
+  transition: ease-in-out;
+}
+
+.card-btn:active {
+  box-shadow: 10px ease;
+  
 }
 
 .slide {
   opacity: 0;
-  transition-duration: 1s ease;
+  transition-delay: 1.5s;
 }
 
 .slide-active {
-  opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
-  display: flex;
+  margin: auto;
+
 }
 
-
-article button {
-  font-size: 16px;
-  padding: 8px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  margin: -26px 230px 11px -24px;
-  border: 2px solid var(--terttiary-color);  
+.closeModal {
+  color: var(--secondary-color);
+  background-color: rgba(128, 128, 128, 0.418);
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  z-index: 10;
+ 
 }
-
-article button:hover {
-  color: var(--terttiary-color);
-}
-
 /*---------------------------------------------------------------------*/
 
 .contact-form {
@@ -420,17 +441,9 @@ footer {
 .git {
   height: 40px;
   margin: 18px;
-  background: var(--primary-color);
   width: 54px;
   height: 54px;
-  padding: 4px;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    
-}
-
-.git:hover {
-  background-color: var(--secondary-color);
+  padding: 4px;   
 }
 
 .gitCont {
@@ -441,53 +454,49 @@ footer {
   justify-content: flex-end;
   height: 40px;
   margin: 18px;
-  background: var(--primary-color);
   width: 54px;
   height: 54px;
-  padding: 8px;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  
+  padding: 8px; 
 }
 
 .linkedCont {
   justify-content: flex-end;
 }
 
-.linkedin:hover {
-  background-color: var(--secondary-color); 
-}    
-
 /*------------------------------------------------------------------------------------*/
 /*media query for smaller desktop screen and smaller*/
 @media screen and (max-width: 980px) {
-
+  .sliderImage {
+    width: 600px;
+    border-radius: 10px;
+  }
+  .slider {
+    height: 70vh;
+   
+  }
 
 }
 /*media query for tablets and smaller*/
-/* @media screen and (max-width:768px) {
-  main {
-      padding: 0 146px;
+@media screen and (max-width:768px) {
+  .sliderImage {
+    width: 500px;
+    border-radius: 10px;
   }
-} */
+  .slider {
+    height: 60vh;
+   
+  }
+}
 
 /*media query for mobile phones and smaller*/
-/* @media  screen and (max-width: 575px) {
-
-  .hero {
-      height: 450px;
-      padding: 0 54px;
+@media  screen and (max-width: 575px) {
+  .sliderImage {
+    width: 300px;
+    border-radius: 10px;
   }
-  header nav ul {
-      padding: 9px 60px;
-  }
-
-  .section-image {
-      padding: 0;
+  .slider {
+    height: 50vh;
+   
   }
 
-  .section-title {
-      padding: 34px 0 16px
-  }
-
-} */
+}

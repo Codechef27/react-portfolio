@@ -6,7 +6,6 @@ import AboutMe from './components/About-me';
 import SocialLinks from './components/Footer';
 
 
-
 function App() {
   const [navLinks] = useState([
     {
@@ -29,9 +28,9 @@ function App() {
 
   const [currentNavLink, setCurrentNavLink] = useState(navLinks[0]);
   const renderLink = navLinks.filter((link) => link.name === link);
-
+  
   return (
-    <div>
+    <div id='Portfolio'>
       <Nav
         navLinks={navLinks}
         setCurrentNavLink={setCurrentNavLink}
