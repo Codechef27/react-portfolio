@@ -1,26 +1,38 @@
 import React, {useEffect, useState} from "react";
 import Carousel from "../Carousel.js";
+import ContactForm from "../Contact/index.js";
 
 
-const Nav = (props) => {
+function Nav(props) {
 
     const {
         navLinks = [],
         setCurrentNavLink,
-        currentNavLink
+        currentNavLink,
+        // isModalOpen,
+        // setIsModalOpen,
+        // contactState,
+        // setContactState,
     } = props
+
+    
 
     useEffect(() => {
         document.title = (currentNavLink.name);
     }, [ currentNavLink ]); 
 
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [ isModalOpen, setIsModalOpen ] = useState(false)
+    const [showForm, setShowForm] = useState(false)
 
     const toggleModal = () => {
-        setIsModalOpen(prev => !prev);
-        
-    }
+      setIsModalOpen(prev => !prev) 
+   }
 
+   const toggleForm = () => {
+    setShowForm(prev => !prev)
+   }
+
+   
     return (
       
         <header className="container-fluid" >
@@ -56,10 +68,18 @@ const Nav = (props) => {
                             }`} 
                             href={"#" + navLink.name}
                             
-                            onClick={() => {
-                              (navLink.name === 'Portfolio' && toggleModal())
-                              setCurrentNavLink(navLink) 
-                            }}
+                             onClick={() => {
+                             if (navLink.name === "Portfolio") {
+                              toggleModal()
+                            } if (navLink.name === "Contact") {
+                              toggleForm()
+                            }
+                            
+                             
+                              
+                               setCurrentNavLink(navLink) 
+                            }} 
+                          
                         
                           >
                             {navLink.name}
@@ -73,7 +93,8 @@ const Nav = (props) => {
               </nav>
             </div>
           </section>
-          {<Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} onOpen={toggleModal}/>}
+          {<Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>}
+          {<ContactForm showForm={showForm} setShowForm={setShowForm}/>}
         </header>
 
     );

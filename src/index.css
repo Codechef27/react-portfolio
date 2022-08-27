@@ -363,17 +363,19 @@ header a {
 .contact-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  /* justify-content: center;
+  align-items: center; */
+  position:absolute;
+  
+
 }
 
-.section-image {
+/* .section-image {
   color: var(--secondary-color);
   text-align: center;
   padding-right: 40px;
   
-}
+} */
 
 
 form {
@@ -424,6 +426,10 @@ input::placeholder {
 }
 .contact-form button:hover {
   color: var(--terttiary-color);
+}
+
+.errorText {
+  color: var(--primary-color);
 }
  
 /*------------------------------------------------------------------------------------*/

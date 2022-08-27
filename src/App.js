@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import Nav from './components/Nav';
 import AboutMe from './components/About-me';
 import SocialLinks from './components/Footer';
+// import ContactForm from './components/Contact';
+// import Carousel from './components/Carousel.js';
 
 function App() {
   const [navLinks] = useState([
@@ -28,6 +30,18 @@ function App() {
   const [currentNavLink, setCurrentNavLink] = useState(navLinks[0]);
   const renderLink = navLinks.filter((link) => link.name === link);
 
+//   const [ isModalOpen, setIsModalOpen ] = useState(false)
+
+//   const toggleModal = () => {
+//     setIsModalOpen(prev => !prev) 
+//     console.log('toggleModal is running');
+//  }
+
+//  const modalLink = navLinks.filter((links) => links.name === "Portfolio");
+//  modalLink.onclick = setIsModalOpen(!isModalOpen);
+
+
+
 
   return (
     <div>
@@ -36,16 +50,22 @@ function App() {
         navLinks={navLinks}
         setCurrentNavLink={setCurrentNavLink}
         currentNavLink={currentNavLink}
-        renderLink={renderLink} 
+        renderLink={renderLink}
       ></Nav> 
-      <main key={renderLink.name}>
-        <span
+      <main>
+      {/* {navLinks.map((navLink) => (
+        <span key={navLink.name}
           onClick={() => {
-            setCurrentNavLink(renderLink);
+            setCurrentNavLink(renderLink)
+            (navLink.name === "Portfolio" && toggleModal)
+            console.log("onclick is clicked");
           }}
         >
           {renderLink.name}
         </span>
+       ))}   */}
+        {/* {<Carousel isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>} */}
+        {/* <ContactForm></ContactForm> */}
         <Hero></Hero>
         <AboutMe></AboutMe>
       </main>
