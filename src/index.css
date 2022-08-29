@@ -258,72 +258,47 @@ header a {
 }   
 /*-----------------------------------------------------------------*/
 
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  right: 17vw;
-  font-size: 32px;
-  color: rgb(161, 161, 4);
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+.port {
+  background-color: var(--secondary-color);
 }
 
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  left: 17vw;
-  font-size: 32px;
-  color: rgb(161, 161, 4);
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-
+.portTitle {
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  padding: 36px 0 0;
+  color: var(--primary-color);
 }
 
-
-.slider {
-  position: absolute;
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  border-top: 2px solid var(--terttiary-color);
-  
+.portTitle-border {
+  border: 2px solid var(--primary-color);
+  width: 160px;
 }
 
 .card {
-  width: 46%;
   text-align: center;
-  border-radius: 15px;
- 
-
-}
-
-.card-img-top {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  padding: 0px;
+  border: 2px solid black
 }
 
 .card-body {
   color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  background-color: var(--secondary-color);  
 }
 
 .card-border {
   border-bottom: 3px solid var(--primary-color);
-  width: 8rem;  
+  width: 4rem;  
 }
 
 .card-btn {
   border: 1px solid var(--terttiary-color);
   font-size: 16px;
   background-color: var(--secondary-color);
-  padding: 6px;
+  padding: 4px 16px;
   color: var(--primary-color);
   cursor: pointer;
-  margin: 10px;
+  margin: 5px 0;
   border-radius: 10px;
 }
 
@@ -333,57 +308,24 @@ header a {
   transition: ease-in-out;
 }
 
-.slide {
-  transition-delay: .5s;
-}
 
-.slide-active {
-  transition-duration: 2s;
-  transform: scale(1.08);
-  margin: auto;
-
-}
-
-.closeModal {
-  color: var(--secondary-color);
-  background-color: rgba(128, 128, 128, 0.418);
-  border-radius: 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  z-index: 10;
- 
-}
 /*---------------------------------------------------------------------*/
 
-.contact-form {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center;
-  align-items: center; */
-  position:absolute;
-  
-
+.formCont {
+ position: absolute;
+ display: flex;
+ justify-content: flex-end;
 }
-
-/* .section-image {
-  color: var(--secondary-color);
-  text-align: center;
-  padding-right: 40px;
-  
-} */
-
 
 form {
   padding: 26px 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color: var(--secondary-color);
   border-radius: 15px;
+  border: 1px solid var(--terttiary-color);
 }
 
 input {
@@ -405,7 +347,6 @@ input::placeholder {
   background-color: lightgray;
   padding: 2em;
   border-radius: 10px;
-  border: 2px solid transparent;
   outline: none;
   margin: 3px 0;
 }
@@ -415,7 +356,7 @@ input::placeholder {
   font-size: 16px;
 }
 
-.contact-form button {
+.formBtn {
   border: 2px solid var(--terttiary-color);
   font-size: 22px;
   background-color: var(--secondary-color);
@@ -423,9 +364,25 @@ input::placeholder {
   color: var(--primary-color);
   cursor: pointer; 
   margin: 18px;   
+  border-radius: 15px;
 }
-.contact-form button:hover {
+.formBtn:hover {
   color: var(--terttiary-color);
+}
+
+.closeModal {
+  color: var(--secondary-color);
+  background-color: rgba(128, 128, 128, 0.418);
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  z-index: 10;
+ 
 }
 
 .errorText {
@@ -436,12 +393,12 @@ input::placeholder {
 footer { 
   display: flex;
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
  
 }
 
 .copy {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: Brush Script MT;
   font-size: 22px;
 }

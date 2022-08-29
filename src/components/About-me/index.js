@@ -3,7 +3,8 @@ import stopWatch from '../../assets/images/stopwatch-icon.svg';
 import lightBulb from '../../assets/images/light-bulb bw.svg';
 import screen from '../../assets/images/screen-pc-smart-phone-.svg';
 import cogwheels from '../../assets/images/two-settings-cogwheels.svg';
-import profileImg from '../../assets/images/portfolio-pic.jpg'
+import profileImg from '../../assets/images/portfolio-pic.jpg';
+
 
 
 const AboutMe = () => {
@@ -11,7 +12,7 @@ const AboutMe = () => {
     <section id="About me">
       <h2 className="about-title mx-auto">About Me</h2>
       <div className="fact-title-border mx-auto"></div>
-
+          
       <div className="container">
         <div className="row">
           <div className="col-lg-7 d-flex align-items-center bio ">
