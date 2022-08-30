@@ -43,4 +43,4 @@
   * Email Me:  bradleyjkennett@gmail.com
 
   ## Screencast
--[video](../react-portfolio/src/assets/portcast.mp4)
+  portcast.mp4
