@@ -6,7 +6,6 @@ import cogwheels from '../../assets/images/two-settings-cogwheels.svg';
 import profileImg from '../../assets/images/portfolio-pic.jpg';
 
 
-
 const AboutMe = () => {
   return (
     <section id="About me">

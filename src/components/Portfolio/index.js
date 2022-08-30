@@ -13,36 +13,42 @@ const Portfolio = () => {
       image: gameReviews,
       title: "Game reviews",
       link: "https://codechef27.github.io/pc-game-reviews/",
+      git: "https://github.com/Codechef27/pc-game-reviews",
       alt: "game reviews",
     },
     {
       image: theFrontYard,
       title: "The Front Yard",
       link: "https://the-front-yard.herokuapp.com/",
+      git: "https://github.com/robsquaadd/the-front-yard",
       alt: "the front yard online store",
     },
     {
       image: techBlog,
       title: "Tech Blog CMS",
       link: "https://brads-tech-blog-cms.herokuapp.com/",
+      git: "https://github.com/Codechef27/tech-blog-cms",
       alt: " tech blog ",
     },
     {
       image: photoPort,
       title: "Photographer Portfolio",
       link: "https://codechef27.github.io/photo-port/",
+      git: "https://github.com/Codechef27/photo-port",
       alt: " photography portfolio ",
     },
     {
       image: foodFestival,
       title: "Food Festival App.",
       link: "https://codechef27.github.io/food-festival/index.html",
+      git: "https://github.com/Codechef27/food-festival",
       alt: " food festival",
     },
     {
       image: budgetTracker,
       title: "Budget Tracker",
       link: "https://brads-pwa-budget-tracker.herokuapp.com/",
+      git: "https://github.com/Codechef27/pwa-budget-tracker",
       alt: " budget tracker ",
     },
   ]);
@@ -63,7 +69,10 @@ const Portfolio = () => {
                 <p className="card-title">{photo.title}</p>
                 <div className="card-border mx-auto my-1"></div>
                 <a href={photo.link}>
-                  <button className="card-btn">Visit</button>
+                  <button className="card-btn">Visit Site</button>
+                </a>
+                <a href={photo.git}>
+                  <button className="card-btn">Visit Code</button>
                 </a>
               </div>
             </div>

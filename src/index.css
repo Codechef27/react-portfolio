@@ -177,6 +177,32 @@ header a {
   font-weight: bold;
   transition: ease-in-out;
 }
+
+.btn-1:hover > .arrowRight {
+  position: absolute;
+  /* transition: 100ms ease-in-out; */
+  opacity: 0;
+}
+
+.btn-1:hover > .arrowDown {
+  position: relative;
+  transition: 300ms ease-in-out;
+  opacity: 1;
+}
+
+.arrowRight {
+  color: var(--terttiary-color);
+  width: 40px;
+}
+
+.arrowDown {
+  position: absolute;
+ color: var(--terttiary-color);
+ width: 40px;
+ opacity: 0;
+}
+
+
 /*--------------------------------------------------------------------*/
 
 .about-title {
@@ -298,7 +324,7 @@ header a {
   padding: 4px 16px;
   color: var(--primary-color);
   cursor: pointer;
-  margin: 5px 0;
+  margin: 5px 5px;
   border-radius: 10px;
 }
 

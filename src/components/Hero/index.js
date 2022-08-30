@@ -1,5 +1,6 @@
 
 import React from 'react';
+import  {FaArrowRight, FaArrowDown}  from "react-icons/fa";
 
 
 const About = () => {
@@ -15,10 +16,13 @@ const About = () => {
             <p>Full-stack web developer.</p>
 
             <a href="#Portfolio">
+            
               <button
                 className="btn-1"
               >
-                View My Work
+                Recent Projects
+                <FaArrowRight className="arrowRight"></FaArrowRight>
+                <FaArrowDown className="arrowDown"></FaArrowDown>
               </button>
             </a>
           </span>
