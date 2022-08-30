@@ -29,10 +29,12 @@ function App() {
 
   const [currentNavLink, setCurrentNavLink] = useState(navLinks[0]);
   const renderLink = navLinks.filter((link) => link.name === link);
+  const [showResume, setShowResume ] = useState(false)
 
   
 
   return (
+    
     <div>
       
       <Nav
@@ -40,20 +42,27 @@ function App() {
         setCurrentNavLink={setCurrentNavLink}
         currentNavLink={currentNavLink}
         renderLink={renderLink}
+        showResume={showResume}
+        setShowResume={setShowResume}
       ></Nav> 
      
       <main>
-      
-         <Resume></Resume>
+      {!showResume ? (
+        <>
         <Hero></Hero>
         <AboutMe></AboutMe>
         <Portfolio></Portfolio>
+        </>
+        ) : (
+          <Resume showResume={showResume} setShowResume={setShowResume}></Resume> 
+          )}
       </main>
-      <footer>
+       <footer>
         <SocialLinks></SocialLinks>
-      </footer>   
+       </footer>  
     </div>
   ); 
+  
 }
 
 export default App;

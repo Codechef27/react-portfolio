@@ -3,17 +3,26 @@ import ContactForm from "../Contact/index.js";
 
 
 function Nav(props) {
-  const { navLinks = [], setCurrentNavLink, currentNavLink } = props;
+  const { navLinks = [], 
+    setCurrentNavLink, 
+    currentNavLink,
+    setShowResume
+   } = props;
 
   useEffect(() => {
     document.title = currentNavLink.name;
   }, [currentNavLink]);
 
   const [showForm, setShowForm] = useState(false);
+ 
 
   const toggleForm = () => {
     setShowForm((prev) => !prev);
   };
+
+  const toggleResume = () => {
+    setShowResume((prev) => !prev)
+  }
 
   return (
     <header className="container-fluid">
@@ -50,8 +59,16 @@ function Nav(props) {
                         onClick={() => {
                           if (navLink.name === "Contact") {
                             toggleForm();
+                          } else {
+                            setCurrentNavLink(navLink);
+                            setShowForm(false)
                           }
-
+                          if (navLink.name === "Resume") {
+                            toggleResume();                          
+                          } else {
+                            setCurrentNavLink(navLink);
+                            setShowResume(false)
+                          }
                           setCurrentNavLink(navLink);
                         }}
                       >
