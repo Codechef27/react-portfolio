@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.1fb8e7d0.css",
+    "main.js": "/react-portfolio/static/js/main.73a7b25b.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/food-festival.png": "/react-portfolio/static/media/food-festival.c5c1ff86fb95eba91d7e.png",
+    "static/media/photo-port.png": "/react-portfolio/static/media/photo-port.63312ab7c5192e6bb052.png",
+    "static/media/game-reviews.png": "/react-portfolio/static/media/game-reviews.96d8035ae3976fe8d3aa.png",
+    "static/media/portfolio-background.jpg": "/react-portfolio/static/media/portfolio-background.158939593571ff9dece4.jpg",
+    "static/media/portfolio-pic.jpg": "/react-portfolio/static/media/portfolio-pic.99b9fa5cbfb5f38dbbe1.jpg",
+    "static/media/resumePage(1).png": "/react-portfolio/static/media/resumePage(1).3582dc9e4f886b65c5c8.png",
+    "static/media/resumePage(2).png": "/react-portfolio/static/media/resumePage(2).2da92e6344f444b7bf2b.png",
+    "static/media/tech-blog-cms.png": "/react-portfolio/static/media/tech-blog-cms.bba9dc21ab684e228588.png",
+    "static/media/BradResume.pdf": "/react-portfolio/static/media/BradResume.bbff9af5e3e3d79add0d.pdf",
+    "static/media/budget-tracker.png": "/react-portfolio/static/media/budget-tracker.8ef4d1d29ad1b95dea6d.png",
+    "static/media/the-fron-yard.png": "/react-portfolio/static/media/the-fron-yard.271f188e2c3e38fdb431.png",
+    "static/media/two-settings-cogwheels.svg": "/react-portfolio/static/media/two-settings-cogwheels.ed849a17ae88ff6c8d8a2b148232a8de.svg",
+    "static/media/stopwatch-icon.svg": "/react-portfolio/static/media/stopwatch-icon.dedd5717ab97e867449dc8e8d7e45401.svg",
+    "static/media/light-bulb bw.svg": "/react-portfolio/static/media/light-bulb bw.f5c93dfc74a234b615a524b49c92b10e.svg",
+    "index.html": "/react-portfolio/index.html",
+    "static/media/linkedin-icon.svg": "/react-portfolio/static/media/linkedin-icon.ed1324b34473e69c8b7366e0d8d5ee94.svg",
+    "static/media/screen-pc-smart-phone-.svg": "/react-portfolio/static/media/screen-pc-smart-phone-.a2642688dfaa4d0780741f4c7e95a9d6.svg",
+    "static/media/github.svg": "/react-portfolio/static/media/github.22e65707326e3e1e37afd21c5334995a.svg",
+    "main.1fb8e7d0.css.map": "/react-portfolio/static/css/main.1fb8e7d0.css.map",
+    "main.73a7b25b.js.map": "/react-portfolio/static/js/main.73a7b25b.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fb8e7d0.css",
+    "static/js/main.73a7b25b.js"
+  ]
+}
