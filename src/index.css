@@ -308,7 +308,8 @@ header a {
 }
 
 .cardImg {
-  height: auto;
+  height: 30vh;
+
 }
 
 .card-body {
