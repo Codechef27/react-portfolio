@@ -307,6 +307,10 @@ header a {
   border: 2px solid black
 }
 
+.cardImg {
+  height: auto;
+}
+
 .card-body {
   color: var(--primary-color);
   background-color: var(--secondary-color);  
