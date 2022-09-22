@@ -1,9 +1,9 @@
 
 import React, {useState} from "react";
 import gameReviews from "../../assets/images/carousel/game-reviews.png";
-import theFrontYard from "../../assets/images/carousel/the-fron-yard.png";
-import techBlog from '../../assets/images/carousel/tech-blog-cms.png'
-import photoPort from '../../assets/images/carousel/photo-port.png'
+import oneSpark from "../../assets/images/carousel/one-spark.png";
+import shopShop from '../../assets/images/carousel/shop-shop.png'
+import bookSearch from '../../assets/images/carousel/booksearch.png'
 import foodFestival from '../../assets/images/carousel/food-festival.png'
 import budgetTracker from '../../assets/images/carousel/budget-tracker.png'
 
@@ -11,31 +11,31 @@ const Portfolio = () => {
   const [recentWork] = useState([
     {
       image: gameReviews,
-      title: "Game reviews",
+      title: "Video Game Review",
       link: "https://codechef27.github.io/pc-game-reviews/",
       git: "https://github.com/Codechef27/pc-game-reviews",
       alt: "game reviews",
     },
     {
-      image: theFrontYard,
-      title: "The Front Yard",
-      link: "https://the-front-yard.herokuapp.com/",
-      git: "https://github.com/robsquaadd/the-front-yard",
-      alt: "the front yard online store",
+      image: oneSpark,
+      title: "One Spark Memory Match",
+      link: "https://one-spark.herokuapp.com/",
+      git: "https://github.com/Codechef27/one-spark",
+      alt: "one spark gaming app",
     },
     {
-      image: techBlog,
-      title: "Tech Blog CMS",
-      link: "https://brads-tech-blog-cms.herokuapp.com/",
-      git: "https://github.com/Codechef27/tech-blog-cms",
-      alt: " tech blog ",
+      image: shopShop,
+      title: "Shop Shop w/ Redux",
+      link: "https://shop-shopp-redux.herokuapp.com/",
+      git: "https://github.com/Codechef27/shop-shopp",
+      alt: "shop shop ecommerce site",
     },
     {
-      image: photoPort,
-      title: "Photographer Portfolio",
-      link: "https://codechef27.github.io/photo-port/",
-      git: "https://github.com/Codechef27/photo-port",
-      alt: " photography portfolio ",
+      image: bookSearch,
+      title: "Book Search App",
+      link: "https://google-book-engine.herokuapp.com/",
+      git: "https://github.com/Codechef27/google-book-engine",
+      alt: " book search engine ",
     },
     {
       image: foodFestival,
@@ -46,7 +46,7 @@ const Portfolio = () => {
     },
     {
       image: budgetTracker,
-      title: "Budget Tracker",
+      title: "Budget Tracker PWA",
       link: "https://brads-pwa-budget-tracker.herokuapp.com/",
       git: "https://github.com/Codechef27/pwa-budget-tracker",
       alt: " budget tracker ",
