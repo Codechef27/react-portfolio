@@ -1,7 +1,6 @@
 import React  from 'react';
-import resume from '../../assets/BradResume.pdf';
-import pageOne from '../../assets/images/resumePage(1).png';
-import pageTwo from '../../assets/images/resumePage(2).png'
+import resume from '../../assets/resume-2022.pdf';
+import pageOne from '../../assets/images/resume-screenshot.png';
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 
@@ -41,7 +40,7 @@ function Resume({ setShowResume }) {
             ></MdClose>
 
             <img className="img-1" src={pageOne} alt="resume page one"></img>
-            <img className="img-1" src={pageTwo} alt="reume page two"></img>
+            
           </div>
         </div>
       </section>
