@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.83675b8c.css",
-    "main.js": "/react-portfolio/static/js/main.e51ec22c.js",
+    "main.js": "/react-portfolio/static/js/main.dfb846d9.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/food-festival.png": "/react-portfolio/static/media/food-festival.c5c1ff86fb95eba91d7e.png",
     "static/media/shop-shop.png": "/react-portfolio/static/media/shop-shop.10b92084cdf7a609c8ea.png",
@@ -21,11 +21,11 @@
     "static/media/screen-pc-smart-phone-.svg": "/react-portfolio/static/media/screen-pc-smart-phone-.a2642688dfaa4d0780741f4c7e95a9d6.svg",
     "static/media/github.svg": "/react-portfolio/static/media/github.22e65707326e3e1e37afd21c5334995a.svg",
     "main.83675b8c.css.map": "/react-portfolio/static/css/main.83675b8c.css.map",
-    "main.e51ec22c.js.map": "/react-portfolio/static/js/main.e51ec22c.js.map",
+    "main.dfb846d9.js.map": "/react-portfolio/static/js/main.dfb846d9.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83675b8c.css",
-    "static/js/main.e51ec22c.js"
+    "static/js/main.dfb846d9.js"
   ]
 }
