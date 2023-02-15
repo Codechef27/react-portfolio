@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       image: oneSpark,
       title: "One Spark Memory Match",
-      link: "https://one-spark.herokuapp.com/",
+      link: "https://one-spark-matching-game.herokuapp.com/",
       git: "https://github.com/Codechef27/one-spark",
       alt: "one spark gaming app",
     },
